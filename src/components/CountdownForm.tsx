@@ -48,23 +48,23 @@ export const CountdownForm = ({ onStart }: CountdownFormProps) => {
               required
             />
 
-            <TextInput
+             <TextInput
               id="date"
-              type="date"
+              type="text"
+              placeholder="DD/MM/YYYY"
               value={formData.date}
               onChange={(e) => setFormData({...formData, date: e.target.value})}
-              className="!text-base md:!text-lg text-center [&::-webkit-calendar-picker-indicator]:opacity-50 [&::-webkit-calendar-picker-indicator]:cursor-pointer"
-              style={{ colorScheme: 'light' }}
+              className="!text-base md:!text-lg text-center"
               required
             />
 
             <TextInput
               id="time"
-              type="time"
+              type="text"
+              placeholder="HH:MM"
               value={formData.time}
               onChange={(e) => setFormData({...formData, time: e.target.value})}
-              className="!text-base md:!text-lg text-center [&::-webkit-calendar-picker-indicator]:opacity-50 [&::-webkit-calendar-picker-indicator]:cursor-pointer"
-              style={{ colorScheme: 'light' }}
+              className="!text-base md:!text-lg text-center"
               required
             />
 
