@@ -7,7 +7,6 @@ export const NavbarComponent = () => {
 
   const menuItems = [
     { id: 1, name: "Start Countdown", link: "#startCountdown", label: "Start Countdown" },
-    // { id: 2, name: "About", link: "#about", label: "About" },
   ];
 
   return (
