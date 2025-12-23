@@ -48,12 +48,10 @@ export const CountdownForm = ({ onStart }: CountdownFormProps) => {
               required
             />
 
-            <div className="relative">
-              {!formData.date && (
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none text-gray-400 text-base md:text-lg">
-                  Select Date
-                </div>
-              )}
+            <div>
+              <label htmlFor="date" className="block text-base md:text-lg font-medium text-gray-700 mb-2 text-center">
+                Target Date
+              </label>
               <TextInput
                 id="date"
                 type="date"
@@ -65,12 +63,10 @@ export const CountdownForm = ({ onStart }: CountdownFormProps) => {
               />
             </div>
 
-            <div className="relative">
-              {!formData.time && (
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none text-gray-400 text-base md:text-lg">
-                  Select Time
-                </div>
-              )}
+            <div>
+              <label htmlFor="time" className="block text-base md:text-lg font-medium text-gray-700 mb-2 text-center">
+                Target Time
+              </label>
               <TextInput
                 id="time"
                 type="time"
