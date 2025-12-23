@@ -51,7 +51,7 @@ export const CountdownForm = ({ onStart }: CountdownFormProps) => {
              <TextInput
               id="date"
               type="text"
-              placeholder="DD/MM/YYYY"
+              placeholder="MM/DD/YYYY"
               value={formData.date}
               onChange={(e) => setFormData({...formData, date: e.target.value})}
               className="!text-base md:!text-lg text-center"
