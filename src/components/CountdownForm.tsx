@@ -48,25 +48,39 @@ export const CountdownForm = ({ onStart }: CountdownFormProps) => {
               required
             />
 
-             <TextInput
-              id="date"
-              type="text"
-              placeholder="MM/DD/YYYY"
-              value={formData.date}
-              onChange={(e) => setFormData({...formData, date: e.target.value})}
-              className="!text-base md:!text-lg text-center"
-              required
-            />
+            <div className="relative">
+              {!formData.date && (
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none text-gray-400 text-base md:text-lg">
+                  Select Date
+                </div>
+              )}
+              <TextInput
+                id="date"
+                type="date"
+                value={formData.date}
+                onChange={(e) => setFormData({...formData, date: e.target.value})}
+                className="!text-base md:!text-lg text-center [&::-webkit-calendar-picker-indicator]:opacity-50 [&::-webkit-calendar-picker-indicator]:cursor-pointer"
+                style={{ colorScheme: 'light' }}
+                required
+              />
+            </div>
 
-            <TextInput
-              id="time"
-              type="text"
-              placeholder="HH:MM"
-              value={formData.time}
-              onChange={(e) => setFormData({...formData, time: e.target.value})}
-              className="!text-base md:!text-lg text-center"
-              required
-            />
+            <div className="relative">
+              {!formData.time && (
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none text-gray-400 text-base md:text-lg">
+                  Select Time
+                </div>
+              )}
+              <TextInput
+                id="time"
+                type="time"
+                value={formData.time}
+                onChange={(e) => setFormData({...formData, time: e.target.value})}
+                className="!text-base md:!text-lg text-center [&::-webkit-calendar-picker-indicator]:opacity-50 [&::-webkit-calendar-picker-indicator]:cursor-pointer"
+                style={{ colorScheme: 'light' }}
+                required
+              />
+            </div>
 
             <Button 
               type="submit" 
